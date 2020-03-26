@@ -1,5 +1,4 @@
-module.exports = {
-  bancoPokemon :
+export default 
   [
         {
             "Row": "1",
@@ -24789,4 +24788,5 @@ module.exports = {
             "100% CP @ 39": "3293"
         }
       ]
-    }
+    
+   

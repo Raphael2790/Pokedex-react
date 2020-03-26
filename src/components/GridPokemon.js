@@ -1,26 +1,43 @@
 import React, { Component } from 'react';
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col, Table} from 'react-bootstrap';
+import BoxImage from './BoxImage';
 
-const {bancoPokemon} = require('../data')
+import pokemons from '../data';
 
 
 export default class GridPokemon extends Component {
-  state=bancoPokemon
-  
+  state = pokemons
+
   render() {
+    
+    let keysValues = {
+    contentValue :  this.state.map(item =>Object.values(item)),
+    contentKeys : this.state.map(item =>Object.keys(item))
+    }
+  
+
     return (
       <Container>
-        {this.state.map((item)=>{
+        { keysValues.contentValue.map((item, index)=> {
+          let indexPokemon= index < 100?`0${++index}`:++index 
+          let firstPokemon = index < 10?`00${index}`:indexPokemon
+          
 
-          return  <Container>
+            return <Table striped bordered hover variant="dark">
+                  <Container>
                   <Row>
-                  <Col key={item.Row}sm={4}><p>{item.Name}</p></Col>
-                  <Col sm={4}><p>{item.Row}</p></Col>
-                  <Col sm={4}><p>{item.Generation}</p></Col>
-                  </Row>
-                  </Container>
-        })}
+                  <BoxImage id={firstPokemon || indexPokemon}/>
+                    {item.map((item => 
+                      <td><Col sm={4}><p>{item}</p></Col></td>
+                      ))}
+
+                    </Row>
+                    </Container>
+                    </Table>
+
+          })
+        }
       </Container>
     )
-  }
-}
+        }
+      }

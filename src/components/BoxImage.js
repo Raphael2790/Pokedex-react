@@ -1,18 +1,18 @@
 import React from 'react';
-import {Figure, Container} from 'react-bootstrap';
-import FigureImage from 'react-bootstrap/FigureImage';
+import {Figure} from 'react-bootstrap';
 
-export default function Home() {
+export default function BoxImage({id }) {
+
+  let source = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
+
   return (
-    <Container>
       <Figure>
 
-        <FigureImage 
-        width={171} 
-        height={180} 
+        <img 
+        width="171" 
+        height="180" 
         alt="171x180"
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" />
+        src={source} />
       </Figure>
-    </Container>
   )
 }
