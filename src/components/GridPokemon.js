@@ -14,17 +14,8 @@ export default class GridPokemon extends Component {
 
           return  <Container>
                   <Row>
-                  <Col sm={4}><p>{item.Name}</p></Col>
+                  <Col key={item.Row}sm={4}><p>{item.Name}</p></Col>
                   <Col sm={4}><p>{item.Row}</p></Col>
-                  <Col sm={4}><p>{item.Generation}</p></Col>
-                  <Col sm={4}><p>{item.Name}</p></Col>
-                  <Col sm={4}><p>{item.Row}</p></Col>
-                  <Col sm={4}><p>{item.Generation}</p></Col>
-                  <Col sm={4}><p>{item.Name}</p></Col>
-                  <Col sm={4}><p>{item.Pokedex}</p></Col>
-                  <Col sm={4}><p>{item.Generation}</p></Col>
-                  <Col sm={4}><p>{item.Name}</p></Col>
-                  <Col sm={4}><p>{item.Pokedex}</p></Col>
                   <Col sm={4}><p>{item.Generation}</p></Col>
                   </Row>
                   </Container>
