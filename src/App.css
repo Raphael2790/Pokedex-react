@@ -1,27 +1,104 @@
-.App {
-  text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  height: 0px;
+}
+.section-title h4 {
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  background-color: lightcyan;
+  width: 1110px;
+  border-radius: 5px;
+  color: black;
+}
+
+
+.pokemon-info {
+  background: var(--darkGrey);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing);
+  box-sizing: border-box;
+}
+
+.carousel-slide-pokemons {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-column-gap: 20px;
+  justify-content: center;
+  background-color: lightcyan;
+  width: 1110px;
+}
+
+.featured-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffd700;
+  color: black;
+  padding: 0.3rem 0.3rem 0.3rem;
+  border-radius: 0.5rem;
+  font-size: 0.5rem;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+
+.footer{
+  padding-top: 10px;
+  margin: 0 auto;
+  height: 80px;
+  background-color: #6C757D;
+  border-radius: 5px;
+  width: 1110px;
+}
+
+.footer p {
+  text-align: center;
+  color: black;
+  font-weight: 700;
+}
+
+@media screen and (max-width:480px) {
+.featured-pokemons-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+}
+
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

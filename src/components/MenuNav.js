@@ -4,9 +4,8 @@ import {Navbar, Nav, FormControl, Form, Button, Container} from 'react-bootstrap
 export default class MenuNav extends Component {
   render() {
     return (
-      <>
       <Container>
-        <Navbar bg="secondary" expand="lg" className="justify-content-center">
+        <Navbar bg="secondary" className="justify-content">
           <Navbar.Brand href="/">Pokedex</Navbar.Brand>
           <Nav classname="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
@@ -18,7 +17,6 @@ export default class MenuNav extends Component {
           </Form>
         </Navbar>
       </Container>
-      </>
     )
   }
 }

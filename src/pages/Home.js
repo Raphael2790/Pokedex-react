@@ -1,14 +1,18 @@
 import React from 'react';
-import BoxImage from '../components/BoxImage';
+import CarouselHome from '../components/CarouselHome';
 import MenuNav from '../components/MenuNav';
-import Banner from '../components/Banner'
+import Banner from '../components/Banner';
+import Title from '../components/Title';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
   <>
     <MenuNav/>
     <Banner/>
-    <BoxImage/>
+    <Title title="Some Pokemons"/>
+    <CarouselHome/>
+    <Footer/>
   </>
   )
 }

@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
-import {Container, Row, Col, Table} from 'react-bootstrap';
+import {Container,Card} from 'react-bootstrap';
 import BoxImage from './BoxImage';
-
-import pokemons from '../data';
+import {PokemonContext} from '../Context';
 
 
 export default class GridPokemon extends Component {
-  state = pokemons
+  static contextType = PokemonContext;
 
   render() {
     
-    let keysValues = {
-    contentValue :  this.state.map(item =>Object.values(item)),
-    contentKeys : this.state.map(item =>Object.keys(item))
-    }
-  
+    let {pokemons,featured,legendary} = this.context;
 
     return (
       <Container>
-        { keysValues.contentValue.map((item, index)=> {
+        { featured.map((item, index)=> {
           let indexPokemon= index < 100?`0${++index}`:++index 
           let firstPokemon = index < 10?`00${index}`:indexPokemon
           
@@ -26,10 +21,10 @@ export default class GridPokemon extends Component {
             return <Table striped bordered hover variant="dark">
                   <Container>
                   <Row>
-                  <BoxImage id={firstPokemon || indexPokemon}/>
-                    {item.map((item => 
-                      <td><Col sm={4}><p>{item}</p></Col></td>
-                      ))}
+                  <BoxImage id={item.Row}/>
+                   
+                      <td><Col sm={4}><p>{item.Name}</p></Col></td>
+                      
 
                     </Row>
                     </Container>
