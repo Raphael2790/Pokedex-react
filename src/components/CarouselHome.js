@@ -11,6 +11,9 @@ export default class CarouselHome extends Component {
   render() {
 
     const { featured, aquirable, weakers} = this.context;
+
+
+    
     
     return(
       <Container className="carousel-slide-pokemons">

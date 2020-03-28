@@ -14,7 +14,7 @@ class PokemonProvider extends Component {
   }
 
   componentDidMount() {
-    let pokemons = this.formatData(allpokemons);
+    let pokemons = allpokemons
     let aquirable = allpokemons.filter(pokemon =>
       pokemon.Row < 385)
     let weakers = allpokemons.filter(pokemon =>
@@ -22,8 +22,6 @@ class PokemonProvider extends Component {
     let featured = allpokemons.filter(pokemon => 
       pokemon["Not-Gettable"] === "1");
 
-      console.log(aquirable)
-    
       this.setState({
         pokemons,
         featured,

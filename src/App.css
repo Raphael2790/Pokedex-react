@@ -28,10 +28,10 @@
   letter-spacing: var(--mainSpacing);
   text-transform: capitalize;
   margin-bottom: 1rem;
-  background-color: lightcyan;
   width: 1110px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: black;
+  border: rgba(0, 0, 0, 0.5) solid 2px;
 }
 
 
@@ -50,8 +50,8 @@
   grid-template-columns: 300px 300px 300px;
   grid-column-gap: 20px;
   justify-content: center;
-  background-color: lightcyan;
   width: 1110px;
+  cursor: pointer;
 }
 
 .featured-top{
@@ -65,6 +65,30 @@
   font-size: 0.5rem;
   text-align: center;
   transition: var(--mainTransition);
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(5 , 1fr);
+  align-content: center;
+  grid-row-gap:20px;
+  background-color: #cfcfcf;
+  padding-top:20px;
+  padding-bottom: 20px;
+  width: 1110px;
+}
+
+.card{
+  background-color: #343A40;
+  color: white;
+  border-radius: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card:hover{
+  border: white solid 2px;
+  padding: 10px;
 }
 
 .footer{
