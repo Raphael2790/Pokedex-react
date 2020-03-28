@@ -34,6 +34,12 @@
   border: rgba(0, 0, 0, 0.5) solid 2px;
 }
 
+.list-group-pokemon{
+  font-weight: 700;
+  color:#6C757D;
+  border-radius: 10px;
+  margin: 1px;
+} 
 
 .pokemon-info {
   background: var(--darkGrey);
@@ -98,15 +104,18 @@
   background-color: #6C757D;
   border-radius: 5px;
   width: 1110px;
+  position: relative;
+  bottom: 0;
 }
 
 .footer p {
   text-align: center;
   color: black;
   font-weight: 700;
+  opacity:0.5;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:700px) {
 .featured-pokemons-center {
   width: 80vw;
   margin: 0 auto;
