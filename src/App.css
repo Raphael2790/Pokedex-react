@@ -37,18 +37,19 @@
 .list-group-pokemon{
   font-weight: 700;
   color:#6C757D;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 1px;
+  height: 70px;
+  margin-bottom: 20px;
 } 
 
 .pokemon-info {
-  background: var(--darkGrey);
+  background: #343A40 ;
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
-  box-sizing: border-box;
 }
 
 .carousel-slide-pokemons {
@@ -57,6 +58,16 @@
   grid-column-gap: 20px;
   justify-content: center;
   width: 1110px;
+  cursor: pointer;
+  background-color: #cfcfcf;
+  border-radius: 10px;
+}
+
+.carousel-item{
+  background-color: #343A40;
+  color: white;
+  border-radius: 20px;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -90,6 +101,7 @@
   border-radius: 20px;
   align-items: center;
   cursor: pointer;
+  display: grid;
 }
 
 .card:hover{
@@ -104,8 +116,6 @@
   background-color: #6C757D;
   border-radius: 5px;
   width: 1110px;
-  position: relative;
-  bottom: 0;
 }
 
 .footer p {

@@ -20,7 +20,7 @@ export default class CarouselHome extends Component {
       
       <Carousel>
         {featured.map((item) => {
-          return <Carousel.Item>
+          return <Carousel.Item className="carousel-item">
                     
                     <BoxImage id={item.Row}/>
                       <p className="pokemon-info">{item.Name}</p>

@@ -7,6 +7,10 @@ import Title from '../components/Title';
 
 
 export default class Pokedex extends Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props)
+  }
   render() {
     return (
       <>
