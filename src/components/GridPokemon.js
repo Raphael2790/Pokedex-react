@@ -19,7 +19,7 @@ export default class GridPokemon extends Component {
           let firstid = item["Pokedex Number"] < 10?`00${item["Pokedex Number"]}`:id
           let src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${ firstid || id}.png`
                    
-            return <a href={`https://www.pokemon.com/br/pokedex/${item.Name}`}>
+            return <a key={item["Pokedex Number"]} href={`https://www.pokemon.com/br/pokedex/${item.Name}`}>
                    <Card style={{width:'10rem'}} className="card">
                    <CardImg variant="top"
                    src={src}>

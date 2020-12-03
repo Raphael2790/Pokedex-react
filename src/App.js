@@ -5,7 +5,6 @@ import './App.css';
 import Home from './pages/Home';
 import Pokedex from './pages/Pokedex';
 import Error from './pages/Error';
-import PokemonPages from './pages/PokemonPage'
 
 import {Route, Switch} from 'react-router-dom'
 
@@ -15,7 +14,6 @@ function App() {
     <Switch>
     <Route exact path="/pokedex" component={Pokedex}/>
     <Route exact path="/" component={Home}/>
-    <Route exact path="/pokedex/:slug" component={PokemonPages}/>
     <Route component={Error}/>
     </Switch>
     </>
